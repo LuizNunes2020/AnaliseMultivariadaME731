@@ -78,7 +78,7 @@ class Vlr:
             dict_writer.writerows(data)
 
 if __name__ == "__main__":
-    url = "https://www.vlr.gg/stats/?event_group_id=all&event_id=all&region=all&min_rounds=200&min_rating=1550&agent=all&map_id=all&timespan=all"
+    url = "https://www.vlr.gg/stats"
     vlr = Vlr()
     data = vlr.vlr_stats(url)
-    vlr.save_to_csv(data, 'vlr_stats_5.csv')
+    vlr.save_to_csv(data, 'vlr_stats1.csv')
