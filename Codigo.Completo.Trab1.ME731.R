@@ -25,9 +25,9 @@ dados_numericos <- dados %>% select(rating,
                                     headshot_percentage,
                                     clutch_success_percentage)
 
-# Imputar a média para valores ausentes (NA)
+# Remover todos os dados faltantes (NA)
 dados_numericos <- dados_numericos %>%
-  mutate(across(everything(), ~ ifelse(is.na(.), mean(., na.rm = TRUE), .)))
+  drop_na()
 
 # Executar a Análise de Componentes Principais (PCA)
 resultado_pca <- PCA(dados_numericos, scale.unit = TRUE, graph = FALSE)
