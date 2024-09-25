@@ -6,7 +6,7 @@ library(factoextra)
 library(aplpack)
 
 # Carregar os dados 
-dados <- read_csv(file.choose())
+dados <- read_csv(file.choose()) #baixe o arquivo "dados_valorant.csv"
 
 # Converter colunas de porcentagem para valores numéricos
 dados <- dados %>%
